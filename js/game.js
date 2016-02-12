@@ -1,7 +1,6 @@
 var player;
 var cursors;
-var w = game.width;
-var h = game.height;
+
 var gameState = {
 
 
@@ -10,13 +9,12 @@ var gameState = {
     // game.add.plugin(Phaser.Plugin.Inspector);
     //game.add.image(0, 0, 'bg');
 
-    player = game.add.sprite(10, 10, 'char');
-    game.physics.enable(player,Phaser.Physics.ARCADE);
-    cursors = game.input.keyboard.createCursorKeys();
 
 
 
-    //game.paper = new Paper(game, 100,600, 1);
+      var w = game.width;
+      var h = game.height;
+      game.paper = new Paper(game, this.game.width/2, 0, 1);
     //game.add.plugin(Phaser.Plugin.Debug);
     //game.add.plugin(Phaser.Plugin.Inspector);
     //game.add.image(0, 0, 'bg');
@@ -24,7 +22,7 @@ var gameState = {
       player.scale.setTo(0.4,0.4);
       game.physics.enable(player, Phaser.Physics.ARCADE);
       cursors = game.input.keyboard.createCursorKeys();
-      //game.paper.create();
+      game.paper.create();
   },
 
 
