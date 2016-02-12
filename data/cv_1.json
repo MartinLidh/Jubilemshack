@@ -1,7 +1,7 @@
 {
   "sentences": [
     {
-      "sentence": "Hej mitt namn är #{0} och jag skulle säga \natt jag är en #{1} #{2}, som älskar \natt #{3}",
+      "sentence": "Hej mitt namn är #{0} och jag skulle\nsäga att jag är en #{1} #{2},\nsom älskar att #{3}",
       "words": [
         [
          {

@@ -1,5 +1,5 @@
 String.prototype.splice = function(idx, rem, str) {
-    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+  return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
 };
 
 Paper = function (game, x, y, rotateSpeed) {
@@ -8,13 +8,13 @@ Paper = function (game, x, y, rotateSpeed) {
   this.wordDelay = 50;
   this.breakLineIndex = 40;
 
-  this.charSize = 100/11;
+  this.charSize = 12;
   this.words = [];
   this.currentSentence = 0;
   this.sentences = game.cache.getJSON('cv1');
   this.textStyle = {
     fill: '#000000',
-    font: '13px Courier'
+    font: '12px Courier'
   } 
 };
 
@@ -30,24 +30,18 @@ Paper.prototype.create = function(){
   game.add.image(this.x, this.y, 'paper');
   var text = game.add.text(this.x + 20, this.y + 30, "", this.textStyle);
   var sentence = this.getCurrentSentence();
-  
+
   var letterIndex = 0;
-  game.time.events.loop(this.wordDelay, function(){
-    letterIndex++;
-    if(sentence[letterIndex] === "#"){
-      var x = this.x + (letterIndex * this.charSize);
-      this.createWord(x);
-    }
+  var timer = game.time.events.loop(this.wordDelay, function(){
     text.text = sentence.substring(0, letterIndex);
-    if(letterIndex >= sentence.length) return;
-//    console.log('test');
+    letterIndex++;
   }, this);
-  
+
 };
-Paper.prototype.createWord = function(x){
-  var word = new PaperWord(game, x, this.y + 30, "#009fe3");
+Paper.prototype.createWord = function(x, y){
+  console.log('X', x, 'Y', y);
+  var word = new PaperWord(game, x, y + 30, "#009fe3");
   word.create();
   this.words.push(word);
-  console.log(this.words.length);
 };
 

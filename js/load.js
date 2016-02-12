@@ -15,6 +15,7 @@ var loadState = {
 
 
         game.load.image('paper', 'assets/paper.png');
+        game.load.image('rect_1', 'assets/redrect.png');
         //Load your sounds, efx, music...
         //Example: game.load.audio('rockas', 'assets/snd/rockas.wav');
 
