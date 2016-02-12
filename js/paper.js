@@ -40,7 +40,7 @@ Paper.prototype.create = function(){
     }
     text.text = sentence.substring(0, letterIndex);
     if(letterIndex >= sentence.length) return;
-    console.log('test');
+//    console.log('test');
   }, this);
   
 };
@@ -50,6 +50,4 @@ Paper.prototype.createWord = function(x){
   this.words.push(word);
   console.log(this.words.length);
 };
-Paper.prototype.update = function(){
 
-};
