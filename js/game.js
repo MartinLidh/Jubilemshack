@@ -1,12 +1,12 @@
 var player;
 var cursors;
-var w = game.width;
-var h = game.height;
+
 var gameState = {
      
 
   create: function(){
-
+      var w = game.width;
+      var h = game.height;
     //game.paper = new Paper(game, 100,600, 1);
     //game.add.plugin(Phaser.Plugin.Debug);
     //game.add.plugin(Phaser.Plugin.Inspector);
