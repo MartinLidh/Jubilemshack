@@ -33,4 +33,3 @@ Paper.prototype.create = function(){
 
   game.add.image(this.x, this.y, 'paper');
 };
-

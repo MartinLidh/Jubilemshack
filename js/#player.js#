@@ -22,25 +22,6 @@ Player.prototype.create = function(){
 
 }
 
-//Player.prototype.update = function() {
-  /*  player.body.velocity.setTo(0, 0);
-    
-    
-    if(cursors.left.isDown)
-    {
-	
-	if(!(player.x < (player.width/2)*charScale)){
-		player.body.velocity.x = -400;
-	}
-    }
-    
-    else if(cursors.right.isDown)
-    {
-	if(!(player.x > w/2-(player.width/2)*charScale))
-	    player.body.velocity.x = 400;
-    }*/
-    
-    
-//};
+
     
 
