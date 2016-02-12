@@ -5,7 +5,7 @@
         <title>GetAJob</title>
         <script src="phaser.min.js"></script>
 
-	<script type="text/javascript" src="js/Game.js">
+	<script type="text/javascript" src="js/Game.js"></script>
     </head>
     <body>
 
@@ -13,12 +13,10 @@
 
     window.onload = function() {
 
-    var game = new Phaser.Game(800, 600, Phaser.AUTO, '');
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game');
     game.state.add('Game', GetAJob.Game);
 
     game.state.start('Game');
-        
-
       
     };
 
