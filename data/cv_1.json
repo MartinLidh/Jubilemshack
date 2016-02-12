@@ -1,0 +1,91 @@
+{
+  "sentences": [
+    {
+      "sentence": "Hej mitt namn är #{0} och jag skulle säga att jag är en #{1} #{2}, som älskar att #{3}",
+      "words": [
+        [
+         {
+          "word": "Daniel",
+          "points": 4
+         },{
+          "word": "Banana",
+          "points": -4
+         },{
+          "word": "Mr. Awesome",
+          "points": -1
+         },{
+          "word": "Superman",
+          "points": -3
+         },{
+          "word": "Pelle",
+          "points": 4
+         },{
+          "word": "Bruce Wayne",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "glad",
+          "points": 4
+         },{
+          "word": "arg",
+          "points": -4
+         },{
+          "word": "konstig",
+          "points": -1
+         },{
+          "word": "bitter",
+          "points": -3
+         },{
+          "word": "positiv",
+          "points": 4
+         },{
+          "word": "ambitiös",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "person",
+          "points": 4
+         },{
+          "word": "babian",
+          "points": -4
+         },{
+          "word": "neandertalare",
+          "points": -1
+         },{
+          "word": "lönnmördare",
+          "points": -3
+         },{
+          "word": "själ",
+          "points": 4
+         },{
+          "word": "Skill-anställd",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "promenera i skogen",
+          "points": 4
+         },{
+          "word": "fisa",
+          "points": -4
+         },{
+          "word": "gå på toa",
+          "points": -1
+         },{
+          "word": "dödskröka",
+          "points": -3
+         },{
+          "word": "hjälpa människor",
+          "points": 4
+         },{
+          "word": "programmera",
+          "points": 6
+         }
+        ]
+
+      ]
+    }
+  ]
+}
