@@ -10,7 +10,7 @@ var loadState = {
 
 
         //Load your images, spritesheets, bitmaps...
-        game.load.image('bg', 'assets/background.jpg');
+        //game.load.image('bg', 'assets/background.jpg');
         game.load.image('char', 'assets/guy.png');
 
 

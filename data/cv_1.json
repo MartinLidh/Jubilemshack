@@ -219,6 +219,73 @@
          }
         ]
       ]
+    },
+
+    {
+      "sentence": "Jag studerar mitt #{0}",
+      "words": [
+        [
+         {
+          "word": "glädje",
+          "points": 4
+         },{
+          "word": "merarbete för mina kollegor",
+          "points": -4
+         },{
+          "word": "skit",
+          "points": -1
+         },{
+          "word": "risigt arbete",
+          "points": -3
+         },{
+          "word": "en lättsam attityd",
+          "points": 4
+         },{
+          "word": "mina överlägsna programmeringskunskaper",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "positivitet",
+          "points": 4
+         },{
+          "word": "balla skämt",
+          "points": -4
+         },{
+          "word": "trist stämning",
+          "points": -1
+         },{
+          "word": "en sällan skådad negativitet",
+          "points": -3
+         },{
+          "word": "stor arbetskapacitet",
+          "points": 4
+         },{
+          "word": "seriositet",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "seriöst",
+          "points": 4
+         },{
+          "word": "tråkigt",
+          "points": -4
+         },{
+          "word": "lojt",
+          "points": -1
+         },{
+          "word": "rörigt",
+          "points": -3
+         },{
+          "word": "roligt",
+          "points": 4
+         },{
+          "word": "god stämning",
+          "points": 6
+         }
+        ]
+      ]
     }
   ]
 }
