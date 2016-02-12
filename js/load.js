@@ -19,7 +19,7 @@ var loadState = {
 
         //Load your data, JSON, Querys...
         //Example: game.load.json('version', 'http://phaser.io/version.json');
-
+        game.load.json('cv1', 'data/cv_1.json');
     },
 
     create: function() {
@@ -27,5 +27,6 @@ var loadState = {
         game.stage.setBackgroundColor('#000');
         game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
         game.state.start('menu');
+        game.scale.startFullScreen(true);
     }
 };
