@@ -11,9 +11,10 @@ var loadState = {
 
         //Load your images, spritesheets, bitmaps...
         game.load.image('bg', 'assets/background.jpg');
-	game.load.image('char', 'assets/guy.png');
+        game.load.image('char', 'assets/guy.png');
 
 
+        game.load.image('paper', 'assets/paper.png');
         //Load your sounds, efx, music...
         //Example: game.load.audio('rockas', 'assets/snd/rockas.wav');
 
