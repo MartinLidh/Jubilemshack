@@ -44,4 +44,3 @@ Paper.prototype.createWord = function(x, y){
   word.create();
   this.words.push(word);
 };
-
