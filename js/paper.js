@@ -28,7 +28,7 @@ Paper.prototype.create = function(){
     letterIndex++;
     text.text = sentence.substring(0, letterIndex);
     if(letterIndex >= sentence.length) return;
-    console.log('test');
+//    console.log('test');
   }, this);
 
   game.add.image(this.x, this.y, 'paper');
