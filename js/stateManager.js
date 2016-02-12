@@ -4,8 +4,8 @@ var w = 640,
 
 //For Fullscreen put this code:
 
-var w = window.innerWidth * window.devicePixelRatio,
-    h = window.innerHeight * window.devicePixelRatio;
+var w = window.innerWidth * 1,//window.devicePixelRatio,
+    h = window.innerHeight * 1;//window.devicePixelRatio;
 
 
 var game = new Phaser.Game(w, h, Phaser.AUTO, 'gameContainer');
