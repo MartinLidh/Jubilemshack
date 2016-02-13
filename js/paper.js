@@ -5,13 +5,12 @@ String.prototype.splice = function(idx, rem, str) {
 Paper = function (game, x, y, rotateSpeed) {
   Phaser.Sprite.call(this, game, x, y, 'paper');
 
-  this.wordDelay = 5;
+  this.wordDelay = 50;
   this.breakLineIndex = 40;
-
   this.charSize = 12;
   this.words = [];
   this.resetColours();
-  this.currentSentence = 0;
+  this.currentSentence = -1;
   this.sentences = game.cache.getJSON('cv1');
   this.textStyle = {
     fill: '#000000',
@@ -37,14 +36,22 @@ Paper.prototype.getCurrentText = function(){
 
 Paper.prototype.create = function(){
   game.add.image(this.x, this.y, 'paper');
-  var text = game.add.text(Math.floor(this.x + 20), Math.floor(this.y + 30), "", this.textStyle);
+  this.triggerNextWord();
+};
+
+Paper.prototype.triggerNextWord = function(){
+  this.resetColours();
+  this.currentSentence++;
+  console.log(this.currentSentence);
+  var text = game.add.text(Math.floor(this.x + 20), Math.floor((this.y + 30) + (100 * this.currentSentence)), "", this.textStyle);
   this.texts.push(text);
   var sentence = this.getCurrentSentence();
   sentence = sentence.replace(/(#{\d})/g, "██████████");
   var letterIndex = 0;
   var minusNewline = 0;
   var wordCount = -1;
-  var timer = game.time.events.loop(this.wordDelay, function(){
+  game.time.events.start();
+  game.time.events.loop(this.wordDelay, function(){
     if(sentence[letterIndex] === "\n"){
       minusNewline++;
     }
@@ -61,21 +68,26 @@ Paper.prototype.create = function(){
     letterIndex++;
     if(letterIndex >= sentence.length){
       game.time.events.stop();
-//#      this.assignText("Björne", "blue");
-//#      console.log(this.getWord());
-//#      this.assignText("ful kille", "yellow");
-//#      console.log(this.getWord());
-//#      this.assignText("hatar kvinnor", "red");
-//#      console.log(this.getWord());
-//#      this.assignText("Björne", "pink");
+      var v = this.getWord();
+      console.log(v);
+      this.assignText(v.word, v.color);
+      v = this.getWord();
+      this.assignText(v.word, v.color);
+      v = this.getWord();
+      this.assignText(v.word, v.color);
+      v = this.getWord();
+      this.assignText(v.word, v.color);
     }
   }, this);
+
 };
 
 Paper.prototype.getWordFromColor = function(color){
   allWordColours = ['blue', 'pink', 'red', 'yellow'];
   var cIndex = allWordColours.indexOf(color);
-  return this.sentences.sentences[this.currentSentence].words[cIndex];
+  var words = this.sentences.sentences[this.currentSentence].words[cIndex];
+  var r = Math.floor(Math.random() * words.length);
+  return words[r];
 };
 
 Paper.prototype.getWord = function(){
@@ -114,8 +126,12 @@ Paper.prototype.assignText = function(input, color){
       text.addColor("#000000", i - minusNewline);
     }
     text.addColor("#000000", wordIndex + i);
-  } 
 
+
+  } 
+  if(wordCount === -1){
+    this.triggerNextWord();
+  }
 
 }
 
