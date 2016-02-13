@@ -174,9 +174,6 @@ Paper.prototype.assignText = function(input, color, point){
       game.state.start('postgame');
       }
       
-
-
-
     }else{
       this.triggerNextWord();
     }

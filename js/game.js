@@ -22,7 +22,7 @@ var gameState = {
     //this.spawnWord();
 
 
-    //game.physics.enable(game.player, Phaser.Physics.ARCADE);
+    game.physics.enable(game.player, Phaser.Physics.ARCADE);
 
 
     //game.add.plugin(Phaser.Plugin.Debug);
