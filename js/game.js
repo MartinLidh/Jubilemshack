@@ -16,11 +16,9 @@ var gameState = {
 	game.paper = new Paper(game, this.game.width/2, 0, 1);
 	game.paper.create();
 	game.player = new Player(game);
-	this.spawnWord();
+	//this.spawnWord();
 
-	this.game.time.events.loop(1000, function() {
-		this.spawnWord();
-	}, this);
+	
 	//game.physics.enable(game.player, Phaser.Physics.ARCADE);
 	
 
@@ -48,13 +46,20 @@ var gameState = {
 	this.game.physics.arcade.overlap(game.player.player, this.words, function(player, word) {
 
 		this.game.paper.assignText(word.wordText, word.wordColor, word.wordPoint);
+
+		this.words.forEach(function(w) {
+
+			if (w.wordColor == word.wordColor) {
+
+				console.log("KOIKO");
+				w.text.kill();
+				w.kill();
+			}
+
+		}, this);
+
 		word.text.destroy();
-		word.destroy();
-		
-
-	
-
-		
+		word.destroy();		
 
 	}, null, this);
 
@@ -83,17 +88,14 @@ var gameState = {
 	spawnWord: function() {
 
 		var word = 	game.paper.getWord();
-		var speed = game.rnd.integerInRange(200, 500);
-		var rndX = game.rnd.integerInRange(10, 500);
-		console.log(rndX);
+		var speed = game.rnd.integerInRange(150, 300);
+		var rndX = game.rnd.integerInRange(50, game.width/2 - 50);
 		var word =this.words.add(new Word(game, rndX, -30, speed,word.word, word.color, word.points));
 		word.update = function(){
 
 			if(this.y > game.height){
 			this.text.destroy();
 			this.destroy();
-			console.log("kan ha funkat");
-
 			}
 
 			this.text.x = Math.floor(this.x + this.width / 2);

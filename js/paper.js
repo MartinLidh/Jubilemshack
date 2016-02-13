@@ -4,7 +4,7 @@ String.prototype.splice = function(idx, rem, str) {
 
 Paper = function (game, x, y, rotateSpeed) {
   Phaser.Sprite.call(this, game, x, y, 'paper');
-
+  this.wordSpawner = null;
   this.wordDelay = 20;
   this.breakLineIndex = 40;
   this.charSize = 12;
@@ -63,6 +63,9 @@ Paper.prototype.triggerNextWord = function(){
   var letterIndex = 0;
   var minusNewline = 0;
   var wordCount = -1;
+  if(this.wordSpawner != null){
+        game.time.events.remove(this.wordSpawner);
+      }
   game.time.events.start();
   this.timer = game.time.events.loop(this.wordDelay, function(){
     if(sentence[letterIndex] === "\n"){
@@ -88,6 +91,9 @@ Paper.prototype.triggerNextWord = function(){
 
 Paper.prototype.removeTimer = function(){
   game.time.events.remove(this.timer);
+  this.wordSpawner = game.time.events.loop(1000, function() {
+    gameState.spawnWord();
+  }, this);
 }
 /*      var v = this.getWord();
       console.log(v);
