@@ -61,13 +61,13 @@ Paper.prototype.create = function(){
     letterIndex++;
     if(letterIndex >= sentence.length){
       game.time.events.stop();
-      this.assignText("Björne", "blue");
-      console.log(this.getWord());
-      this.assignText("ful kille", "yellow");
-      console.log(this.getWord());
-      this.assignText("hatar kvinnor", "red");
-      console.log(this.getWord());
-      this.assignText("Björne", "pink");
+//#      this.assignText("Björne", "blue");
+//#      console.log(this.getWord());
+//#      this.assignText("ful kille", "yellow");
+//#      console.log(this.getWord());
+//#      this.assignText("hatar kvinnor", "red");
+//#      console.log(this.getWord());
+//#      this.assignText("Björne", "pink");
     }
   }, this);
 };
