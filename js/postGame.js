@@ -15,7 +15,7 @@ var postGameState= {
     this.cltext.anchor.setTo(0.5,0.5);
        
     
-    this.readtext = this.game.add.text(game.width/2, 20, game.width, style);
+    this.readtext = this.game.add.text(game.width/2, 20, game.t, style);
     this.readtext.anchor.setTo(0.5,0.5);
 
     this.fbtext = this.game.add.text(game.width/2, 40, "F: Dela på Facebook", style);
