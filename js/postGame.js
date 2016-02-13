@@ -1,6 +1,4 @@
-var postGameState= {
-
-    create: function(){
+var postGameState= { create: function(){
     this.clbg = game.add.sprite(game.width/5, game.height/2, 'paper');
     this.hsbg = game.add.sprite(game.width*0.8, game.height/2, 'paper');
     this.clbg.anchor.setTo(0.5,0.5);
@@ -18,6 +16,7 @@ var postGameState= {
     
     this.letter_text.anchor.setTo(0.5,0);
     this.readtext = this.game.add.text(game.width/2, 20, game.end_s, style);
+    
     this.readtext.anchor.setTo(0.5,0.5);
 
     this.fbtext = this.game.add.text(game.width/2, 40, "F: Dela på Facebook", style);
