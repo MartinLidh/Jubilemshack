@@ -5,7 +5,7 @@ String.prototype.splice = function(idx, rem, str) {
 Paper = function (game, x, y, rotateSpeed) {
   Phaser.Sprite.call(this, game, x, y, 'paper');
 
-  this.wordDelay = 10;
+  this.wordDelay = 20;
   this.breakLineIndex = 40;
   this.charSize = 12;
   this.words = [];
@@ -42,7 +42,6 @@ Paper.prototype.create = function(){
 Paper.prototype.triggerNextWord = function(){
   this.resetColours();
   this.currentSentence++;
-  console.log(this.currentSentence);
   var text = game.add.text(Math.floor(this.x + 20), Math.floor((this.y + 30) + (100 * this.currentSentence)), "", this.textStyle);
   this.texts.push(text);
   var sentence = this.getCurrentSentence();
@@ -65,7 +64,6 @@ Paper.prototype.triggerNextWord = function(){
       text.addColor("#000000", letterIndex - minusNewline);
     }
     text.text = sentence.substring(0, letterIndex);
-    console.log('TRIGGERED!!');
     letterIndex++;
     if(letterIndex >= sentence.length){
       this.removeTimer();
@@ -89,7 +87,6 @@ Paper.prototype.removeTimer = function(){
 Paper.prototype.getWordFromColor = function(color){
   allWordColours = ['blue', 'pink', 'red', 'yellow'];
   var cIndex = allWordColours.indexOf(color);
-  console.log(this.currentSentence);
   var words = this.sentences.sentences[this.currentSentence].words[cIndex];
   var r = Math.floor(Math.random() * words.length);
   return words[r];
@@ -104,22 +101,17 @@ Paper.prototype.getWord = function(){
 };
 
 Paper.prototype.assignText = function(input, color){
-  console.log(input, color);
   var index = this.wordColours.indexOf(color);
   var wordIndex = this.words[index];
 
   var text = this.getCurrentText();
-  console.log(text.text);
   text.text = text.text.splice(wordIndex, 10, ""); 
 
-  console.log(text.text);
   text.text = text.text.splice(wordIndex, 0, input);
 
-  console.log(text.text);
   this.wordColours.splice(this.wordColours.indexOf(color), 1);
   this.words.splice(this.words.indexOf(index),1);
   text.updateText();
-  console.log(this.texts);
   var minusNewline = 0;
   var wordCount = -1;
   for(var i = 0; i < text.text.length; i++){
@@ -140,7 +132,6 @@ Paper.prototype.assignText = function(input, color){
 
   } 
   if(wordCount === -1){
-    console.log(text.text);
     this.triggerNextWord();
   }
 }
