@@ -85,6 +85,7 @@ Paper.prototype.triggerNextWord = function(){
 Paper.prototype.getWordFromColor = function(color){
   allWordColours = ['blue', 'pink', 'red', 'yellow'];
   var cIndex = allWordColours.indexOf(color);
+  console.log(this.currentSentence);
   var words = this.sentences.sentences[this.currentSentence].words[cIndex];
   var r = Math.floor(Math.random() * words.length);
   return words[r];
