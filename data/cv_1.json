@@ -345,86 +345,86 @@
         ]
       ]
     }, {
-      "sentence": "Jag studerar mitt #{0} år på min femåriga utbildning som handlar om #{1}. I verkligen #{2} jag mest i #{3} ändå.",
+      "sentence": "Jag är är duktig på att #{0}, #{1} och mina kunskaper inom #{2} är #{3}",
       "words": [
         [
          {
-          "word": "tredje",
+          "word": "arbeta",
           "points": 2
          },{
-          "word": "nionde",
+          "word": "vara skön",
           "points": -4
          },{
-          "word": "första",
+          "word": "hänga med polare",
           "points": -1
          },{
-          "word": "sjunde",
+          "word": "chilla",
           "points": -3
          },{
-          "word": "fjärde",
+          "word": "progga",
           "points": 4
          },{
-          "word": "femte",
+          "word": "arbeta i grupp",
           "points": 6
          }
         ],[
          {
-          "word": "Maskinteknik",
+          "word": "Räkna",
           "points": 4
          },{
-          "word": "Slaveri",
+          "word": "Slåss",
           "points": -4
          },{
-          "word": "Slamdykare",
+          "word": "spela poker",
           "points": -1
          },{
-          "word": "Harry Potter-kunskap",
+          "word": "dricka öl",
           "points": -3
          },{
-          "word": "Programmering",
+          "word": "analysera",
           "points": 5
          },{
-          "word": "Informationsteknik",
+          "word": "onlineshoppa",
+          "points": -2
+         }
+        ],[
+         {
+          "word": "biometri",
+          "points": 4
+         },{
+          "word": "random bullshit",
+          "points": -4
+         },{
+          "word": "allt möjligt",
+          "points": -1
+         },{
+          "word": "slavhandel",
+          "points": -3
+         },{
+          "word": "matematik",
+          "points": 4
+         },{
+          "word": "IT",
           "points": 6
          }
         ],[
          {
-          "word": "pluggar",
+          "word": "bra",
           "points": 4
          },{
-          "word": "skiter",
+          "word": "fucking amazing",
           "points": -4
          },{
-          "word": "ligger",
+          "word": "medelbra",
           "points": -1
          },{
-          "word": "strosar",
+          "word": "otroligt risiga",
           "points": -3
          },{
-          "word": "studerar",
+          "word": "väldigt bra",
           "points": 4
          },{
-          "word": "jobbar",
-          "points": 6
-         }
-        ],[
-         {
-          "word": "grupprum",
-          "points": 4
-         },{
-          "word": "sängen",
-          "points": -4
-         },{
-          "word": "min lägenhet",
-          "points": -1
-         },{
-          "word": "på en grön sommaräng",
-          "points": -3
-         },{
-          "word": "mina sidoprojekt",
-          "points": 4
-         },{
-          "word": "mina 14 extraarbeten",
+          "word": "utsökt",
           "points": 6
          }
         ]
