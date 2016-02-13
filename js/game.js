@@ -47,7 +47,7 @@ var gameState = {
 
 	this.game.physics.arcade.overlap(game.player.player, this.words, function(player, word) {
 
-		this.game.paper.assignText(word.wordText, word.wordColor);
+		this.game.paper.assignText(word.wordText, word.wordColor, word.wordPoint);
 		word.text.destroy();
 		word.destroy();
 		
@@ -86,7 +86,7 @@ var gameState = {
 		var speed = game.rnd.integerInRange(200, 500);
 		var rndX = game.rnd.integerInRange(10, 500);
 		console.log(rndX);
-		var word =this.words.add(new Word(game, rndX, -30, speed,word.word, word.color));
+		var word =this.words.add(new Word(game, rndX, -30, speed,word.word, word.color, word.points));
 		word.update = function(){
 
 			if(this.y > game.height){
