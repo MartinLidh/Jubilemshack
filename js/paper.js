@@ -5,7 +5,7 @@ String.prototype.splice = function(idx, rem, str) {
 Paper = function (game, x, y, rotateSpeed) {
   Phaser.Sprite.call(this, game, x, y, 'paper');
 
-  this.wordDelay = 50;
+  this.wordDelay = 10;
   this.breakLineIndex = 40;
   this.charSize = 12;
   this.words = [];
@@ -51,7 +51,7 @@ Paper.prototype.triggerNextWord = function(){
   var minusNewline = 0;
   var wordCount = -1;
   game.time.events.start();
-  var timer = game.time.events.loop(this.wordDelay, function(){
+  this.timer = game.time.events.loop(this.wordDelay, function(){
     if(sentence[letterIndex] === "\n"){
       minusNewline++;
     }
@@ -65,14 +65,18 @@ Paper.prototype.triggerNextWord = function(){
       text.addColor("#000000", letterIndex - minusNewline);
     }
     text.text = sentence.substring(0, letterIndex);
+    console.log('TRIGGERED!!');
     letterIndex++;
     if(letterIndex >= sentence.length){
-      game.time.events.remove(this.timer);
-
+      this.removeTimer();
     }
   }, this);
 
 };
+
+Paper.prototype.removeTimer = function(){
+  game.time.events.remove(this.timer);
+}
 /*      var v = this.getWord();
       console.log(v);
       this.assignText(v.word, v.color);
@@ -100,17 +104,22 @@ Paper.prototype.getWord = function(){
 };
 
 Paper.prototype.assignText = function(input, color){
+  console.log(input, color);
   var index = this.wordColours.indexOf(color);
   var wordIndex = this.words[index];
 
   var text = this.getCurrentText();
-
+  console.log(text.text);
   text.text = text.text.splice(wordIndex, 10, ""); 
+
+  console.log(text.text);
   text.text = text.text.splice(wordIndex, 0, input);
 
+  console.log(text.text);
   this.wordColours.splice(this.wordColours.indexOf(color), 1);
   this.words.splice(this.words.indexOf(index),1);
-
+  text.updateText();
+  console.log(this.texts);
   var minusNewline = 0;
   var wordCount = -1;
   for(var i = 0; i < text.text.length; i++){
@@ -132,10 +141,8 @@ Paper.prototype.assignText = function(input, color){
   } 
   if(wordCount === -1){
     console.log(text.text);
-    console.log("trigger!");
     this.triggerNextWord();
   }
-
 }
 
 

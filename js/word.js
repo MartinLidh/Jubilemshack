@@ -7,23 +7,22 @@ Word = function(game, x, y, speed,text,color) {
     this.game.physics.arcade.enable(this);
     this.speed = speed || 1;
     this.anchor.setTo(0.5);
-    var style = { font: '64px monospace', align: 'center', fill: color, stroke: '#000000', strokeThickness: 3};
+    this.tweenX = null;
+    var style = { font: '50px monospace', align: 'center', fill: color, stroke: '#000000', strokeThickness: 3};
     this.text = this.game.add.text(x, y, text, style);
     this.text.scale.setTo(0.5,0.5);
     this.text.anchor.set(0.5);
     this.body.velocity.y = speed;
+    //this.tweenX(0);
 };
 
 Word.prototype = Object.create(Phaser.Sprite.prototype);
 Word.prototype.constructor = Word;
 
-/*Word.prototype.update = function() {
+/*Word.prototype.tweenX = function(value){
 
-    if (this.y < 0) {
-        this.destroy();
-    }
-   // console.log(this);
-    text.x = Math.floor(this.x + this.width / 2);
-    text.y = Math.floor(this.y + this.height / 2);
+    this.tweenX = this.game.add.tween(this.x);
+    this.tweenX.to({this.x: value}, 1000);
+    this.tweenX.start();
 
 }*/

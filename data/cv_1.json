@@ -173,7 +173,7 @@
     }, 
 
      {
-      "sentence": "Jag tror att jag kan tillföra #{0}, bidra med #{1} och se till att det alltid är #{2} och #{3} på jobbet!",
+      "sentence": "Jag tror att jag kan tillföra #{0},\n bidra med #{1} och se till att det alltid \n är #{2} och #{3} på jobbet!",
       "words": [
         [
          {
@@ -256,11 +256,11 @@
           "points": 6
          }
         ]
-       ] 
+      ]
     },
 
     {
-      "sentence": "Jag studerar mitt #{0} år på min femåriga utbildning som handlar om #{1}. I verkligen #{2} jag mest i #{3} ändå.",
+      "sentence": "Jag studerar mitt #{0} år på min femåriga \n utbildning som handlar om #{1}. \n I verkligen #{2} jag mest i #{3} ändå.",
       "words": [
         [
          {
