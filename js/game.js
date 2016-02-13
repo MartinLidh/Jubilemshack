@@ -50,8 +50,6 @@ var gameState = {
 		this.words.forEach(function(w) {
 
 			if (w.wordColor == word.wordColor) {
-
-				console.log("KOIKO");
 				w.text.kill();
 				w.kill();
 			}
