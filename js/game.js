@@ -18,7 +18,7 @@ var gameState = {
 	game.player = new Player(game);
 	this.spawnWord();
 
-	this.game.time.events.loop(5000, function() {
+	this.game.time.events.loop(1000, function() {
 		this.spawnWord();
 	}, this);
 	//game.physics.enable(game.player, Phaser.Physics.ARCADE);
@@ -46,11 +46,12 @@ var gameState = {
 	game.player.player.body.velocity.setTo(0, 0);
 
 	this.game.physics.arcade.overlap(game.player.player, this.words, function(player, word) {
-		
+
 		this.game.paper.assignText(word.wordText, word.wordColor);
 		word.text.destroy();
 		word.destroy();
 		
+
 	
 
 		
@@ -61,7 +62,7 @@ var gameState = {
 	if(cursors.left.isDown)
 	{
 	    if(!(game.player.player.x < 0)){
-		game.player.player.body.velocity.setTo(-400,0);
+		game.player.player.body.velocity.setTo(-500,0);
 		
 	    }
 	}
@@ -69,7 +70,7 @@ var gameState = {
 	else if(cursors.right.isDown)
 	{
 	    if(!(game.player.player.x > w/2))
-		game.player.player.body.velocity.x = 400;
+		game.player.player.body.velocity.x = 500;
 	}
 
 	
@@ -82,13 +83,22 @@ var gameState = {
 	spawnWord: function() {
 
 		var word = 	game.paper.getWord();
-		var speed = 100;
+		var speed = game.rnd.integerInRange(200, 500);
 		var rndX = game.rnd.integerInRange(10, 500);
 		console.log(rndX);
 		var word =this.words.add(new Word(game, rndX, -30, speed,word.word, word.color));
 		word.update = function(){
+
+			if(this.y > game.height){
+			this.text.destroy();
+			this.destroy();
+			console.log("kan ha funkat");
+
+			}
+
 			this.text.x = Math.floor(this.x + this.width / 2);
     		this.text.y = Math.floor(this.y + this.height / 2);
+
 
 		};
 
