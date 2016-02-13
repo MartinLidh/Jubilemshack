@@ -5,6 +5,8 @@ Player = function (game){
     this.player = game.add.sprite(game.width/4, game.height-50, 'char');
     game.physics.arcade.enable(this.player);
     
+    var walk = this.player.animations.add('walk');
+    this.player.play('walk', 10, true);
     this.player.scale.setTo(0.4,0.4);
     this.player.anchor.setTo(0.5,0.5);
 

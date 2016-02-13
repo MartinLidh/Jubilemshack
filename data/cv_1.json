@@ -1,7 +1,7 @@
 {
   "sentences": [
     {
-      "sentence": "Hej mitt namn är #{0} och jag skulle\nsäga att jag är en #{1} #{2}, \nsom älskar att #{3}.",
+      "sentence": "Hej mitt namn är #{0} och jag skulle\nsäga att jag är en #{1} #{2}, \nsom älskar att #{3} .",
       "words": [
         [
          {
@@ -345,7 +345,7 @@
         ]
       ]
     }, {
-      "sentence": "Jag är är duktig på att #{0},\n #{1} och mina kunskaper inom #{2} är #{3}",
+      "sentence": "Jag är är duktig på att #{0},\n #{1} och mina kunskaper inom #{2} \när #{3} .",
       "words": [
         [
          {
