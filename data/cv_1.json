@@ -26,19 +26,19 @@
           "word": "Herr Ober",
           "points": -5
         },{
-          "word": "Masterboss of doom",
+          "word": "Masterboss",
           "points": -4
          },{
           "word": "Batman",
           "points": -1
          },{
-          "word": "Bin laden, Herr bin laden",
+          "word": "Fisken",
           "points": -3
          },{
-          "word": "Erik af äppeltunga",
+          "word": "Erik",
           "points": 4
          },{
-          "word": "Jakob Steksson",
+          "word": "Martin",
           "points": 6
          }
         ],[
@@ -94,7 +94,7 @@
           "points": -3
          },{
           "word": "själ",
-          "points": 4
+          "points": -2
          },{
           "word": "Skill-anställd",
           "points": 6
@@ -137,7 +137,7 @@
           "word": "programmera",
           "points": 6
          },{
-          "word": "söka jobb, yay",
+          "word": "söka jobb",
           "points": 4
          },{
           "word": "chillaxa",
@@ -150,14 +150,14 @@
           "points": 4
          },{
           "word": "fjäska för mina chefer",
-          "points": 6
+          "points": -6
          }
         ]
       ]
     }, 
 
      {
-      "sentence": "Jag finner ert företag #{0} och #{1} och \n skulle gärna #{2} ifall det är \n #{3}.",
+      "sentence": "Jag finner ert företag #{0} och #{1}, jag \n skulle gärna vilja #{2} ifall det är \n #{3}.",
       "words": [
         [
          {
@@ -167,7 +167,7 @@
           "word": "löjligt",
           "points": -4
          },{
-          "word": "sådär kul",
+          "word": "halvbra",
           "points": -1
          },{
           "word": "tråkigt",
@@ -230,7 +230,7 @@
           "points": -3
          },{
           "word": "nice",
-          "points": 4
+          "points": -2
          },{
           "word": "svårt kul",
           "points": 6
@@ -281,7 +281,7 @@
           "word": "fucking möjligt",
           "points": -4
          },{
-          "word": "okej med er????!!!!!",
+          "word": "okej med er??!?!?!",
           "points": -1
          },{
           "word": "intressant",
@@ -470,7 +470,7 @@
     },
 
     {
-      "sentence": "Jag studerar mitt #{0} år på min femåriga \n utbildning som handlar om #{1}. \n I verkligeheten #{2} jag mest i #{3} dock.",
+      "sentence": "Jag studerar mitt #{0} år på min femåriga \n utbildning som handlar om #{1}. \n På fritiden #{2} jag med mina #{3}.",
       "words": [
         [
          {
@@ -538,11 +538,8 @@
           "word": "pluggar",
           "points": 4
          },{
-          "word": "skiter",
+          "word": "bråkar",
           "points": -4
-         },{
-          "word": "ligger",
-          "points": -1
          },{
           "word": "strosar",
           "points": -3
@@ -570,34 +567,31 @@
          }
         ],[
          {
-          "word": "grupprum",
+          "word": "kompisar",
           "points": 4
          },{
-          "word": "sängen",
+          "word": "hobbys",
           "points": -4
          },{
-          "word": "min lägenhet",
+          "word": "husdjur",
           "points": -1
          },{
-          "word": "på en grön sommaräng",
-          "points": -3
+          "word": "vänner",
+          "points": 2
          },{
           "word": "mina sidoprojekt",
           "points": 4
          },{
-          "word": "mina 14 extraarbeten",
+          "word": "mina 2 extraarbeten",
           "points": 6
          },{
           "word": "klassrum",
           "points": 4
          },{
-          "word": "baren",
+          "word": "ovänner",
           "points": -4
          },{
-          "word": "nån randoms lägenhet",
-          "points": -1
-         },{
-          "word": "poolen",
+          "word": "fiender",
           "points": -3
          },{
           "word": "seriösa arbeten",
@@ -697,9 +691,6 @@
          },{
           "word": "allt möjligt",
           "points": -1
-         },{
-          "word": "slavhandel",
-          "points": -3
          },{
           "word": "matematik",
           "points": 4
