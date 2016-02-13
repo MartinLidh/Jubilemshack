@@ -164,7 +164,13 @@ Paper.prototype.assignText = function(input, color, point){
       allText.forEach(function(te){
          t += te + ".";
       });
-      responsiveVoice.speak(t, "Swedish Male");
+      //responsiveVoice.speak(t, "Swedish Male");
+      game.t = "lol";
+      this.game.s = this.score;
+      game.state.start('postgame');
+
+
+
     }else{
       this.triggerNextWord();
     }

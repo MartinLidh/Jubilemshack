@@ -35,8 +35,14 @@ var gameState = {
 
 */
 
-
+	var l = game.input.keyboard.addKey(Phaser.Keyboard.L)
+    l.onDown.add(this.postGame,this);
   },
+
+	postGame: function(){
+        game.state.start('postgame');
+
+    },
 
 
   update: function(){
