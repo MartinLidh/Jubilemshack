@@ -17,7 +17,7 @@ var loadState = {
     game.load.image('paper', 'assets/paper.png');
     game.load.image('rect_1', 'assets/redrect.png');
     //Load your sounds, efx, music...
-    //Example: game.load.audio('rockas', 'assets/snd/rockas.wav');
+    game.load.audio('bg_sound', 'assets/bensound-buddy.mp3');
 
     //Load your data, JSON, Querys...
     //Example: game.load.json('version', 'http://phaser.io/version.json');
@@ -30,5 +30,7 @@ var loadState = {
     game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
     game.state.start('menu');
     game.scale.startFullScreen(true);
+    game.music = game.add.audio('bg_sound');
+    game.music.loop = true;
   }
 };
