@@ -5,12 +5,13 @@ String.prototype.splice = function(idx, rem, str) {
 Paper = function (game, x, y, rotateSpeed) {
   Phaser.Sprite.call(this, game, x, y, 'paper');
 
-  this.wordDelay = 10;
+  this.wordDelay = 20;
   this.breakLineIndex = 40;
   this.charSize = 12;
   this.words = [];
   this.resetColours();
   this.currentSentence = -1;
+  this.score = 0;
   this.sentences = game.cache.getJSON('cv1');
   this.textStyle = {
     fill: '#000000',
@@ -24,6 +25,7 @@ Paper.prototype = Object.create(Phaser.Sprite.prototype);
 Paper.prototype.constructor = Paper;
 
 Paper.prototype.resetColours = function(){
+  this.roundPoints = [];
   this.wordColours = ['blue', 'pink', 'red', 'yellow']
 }
 Paper.prototype.getCurrentSentence = function(){
@@ -40,13 +42,20 @@ Paper.prototype.create = function(){
     fill: '#00000',
     font: '20px Courier'
   });
+  game.add.text(Math.floor(this.x + 30), Math.floor(this.y + this.height - 30), "Score: ", {
+    fill: '#00000',
+    font: '20px Courier'
+  });
+  this.scoreText = game.add.text(Math.floor(this.x + 120), Math.floor(this.y + this.height - 30), "20", {
+    fill: '#00000',
+    font: '20px Courier'
+  });
   this.triggerNextWord();
 };
 
 Paper.prototype.triggerNextWord = function(){
   this.resetColours();
   this.currentSentence++;
-  console.log(this.currentSentence);
   var text = game.add.text(Math.floor(this.x + 20), Math.floor((this.y + 60) + (100 * this.currentSentence)), "", this.textStyle);
   this.texts.push(text);
   var sentence = this.getCurrentSentence();
@@ -69,7 +78,6 @@ Paper.prototype.triggerNextWord = function(){
       text.addColor("#000000", letterIndex - minusNewline);
     }
     text.text = sentence.substring(0, letterIndex);
-    console.log('TRIGGERED!!');
     letterIndex++;
     if(letterIndex >= sentence.length){
       this.removeTimer();
@@ -93,7 +101,6 @@ Paper.prototype.removeTimer = function(){
 Paper.prototype.getWordFromColor = function(color){
   allWordColours = ['blue', 'pink', 'red', 'yellow'];
   var cIndex = allWordColours.indexOf(color);
-  console.log(this.currentSentence);
   var words = this.sentences.sentences[this.currentSentence].words[cIndex];
   var r = Math.floor(Math.random() * words.length);
   return words[r];
@@ -107,23 +114,18 @@ Paper.prototype.getWord = function(){
   return w;
 };
 
-Paper.prototype.assignText = function(input, color){
-  console.log(input, color);
+Paper.prototype.assignText = function(input, color, point){
   var index = this.wordColours.indexOf(color);
   var wordIndex = this.words[index];
-
+  this.roundPoints.push(point);
   var text = this.getCurrentText();
-  console.log(text.text);
   text.text = text.text.splice(wordIndex, 10, ""); 
 
-  console.log(text.text);
   text.text = text.text.splice(wordIndex, 0, input);
 
-  console.log(text.text);
   this.wordColours.splice(this.wordColours.indexOf(color), 1);
   this.words.splice(this.words.indexOf(index),1);
   text.updateText();
-  console.log(this.texts);
   var minusNewline = 0;
   var wordCount = -1;
   for(var i = 0; i < text.text.length; i++){
@@ -144,12 +146,35 @@ Paper.prototype.assignText = function(input, color){
 
   } 
   if(wordCount === -1){
-    console.log(text.text);
+    this.calculateScore(this.roundPoints);
     this.triggerNextWord();
   }
 }
 
-
+Paper.prototype.calculateScore = function(points){
+  var hasMinus = false;
+  var minusScore = 0;
+  var plusScore = 0;
+  var plusCount = 0;
+  for(var i = 0; i < points.length; i++){
+    if(points[i] < 0){
+      hasMinus = true;
+      minusScore += points[i];
+    }else{
+      plusCount++; 
+      plusScore += points[i];
+    }
+  }
+  var score;
+  if(hasMinus){
+    score = minusScore/(plusCount + 1);
+  }else{
+    score = plusScore / plusCount;
+  }
+  this.score += score;
+  this.score / this.currentSentence + 1;
+  this.scoreText.text = this.score.toString();
+};
 Paper.prototype.createWord = function(x, y){
   var word = new PaperWord(game, x, y + 30, "#009fe3");
   word.create();

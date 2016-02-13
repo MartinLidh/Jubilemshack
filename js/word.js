@@ -1,9 +1,10 @@
 
 
-Word = function(game, x, y, speed,text,color) {
+Word = function(game, x, y, speed,text,color, point) {
     Phaser.Sprite.call(this, game, x, y);
     this.wordText = text;
     this.wordColor = color;
+    this.wordPoint = point;
     this.game.physics.arcade.enable(this);
     this.speed = speed || 1;
     this.anchor.setTo(0.5);
