@@ -28,7 +28,7 @@ Paper.prototype.constructor = Paper;
 
 Paper.prototype.resetColours = function(){
   this.roundPoints = [];
-  this.wordColours = ['blue', 'pink', 'red', 'yellow']
+  this.wordColours = ['cyan', 'pink', 'red', 'yellow']
 }
 Paper.prototype.getCurrentSentence = function(){
   return this.sentences.sentences[this.currentSentence].sentence;
@@ -107,7 +107,7 @@ Paper.prototype.removeTimer = function(){
       v = this.getWord();
       this.assignText(v.word, v.color);*/
 Paper.prototype.getWordFromColor = function(color){
-  allWordColours = ['blue', 'pink', 'red', 'yellow'];
+  allWordColours = ['cyan', 'pink', 'red', 'yellow'];
   var cIndex = allWordColours.indexOf(color);
   var words = this.sentences.sentences[this.currentSentence].words[cIndex];
   if(!words) return;
