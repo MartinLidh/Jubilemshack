@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 var postGameState= {
 
     create: function(){
     //this.clbg = game.add.sprite(game.width/5, game.height/2, 'paper');
     this.hsbg = game.add.sprite(game.width/3, game.height/2, 'paper');
     //this.clbg.anchor.setTo(0.5,0.5);
+=======
+var postGameState= { create: function(){
+    this.clbg = game.add.sprite(game.width/5, game.height/2, 'paper');
+    this.hsbg = game.add.sprite(game.width*0.8, game.height/2, 'paper');
+    this.clbg.anchor.setTo(0.5,0.5);
+>>>>>>> 7cf16f57c5770adbb0845c4ad614b2cd835367fe
     this.hsbg.anchor.setTo(0.5,0.5);
 
     var style = { font: '36px monospace', align: 'center', fill: "#009fe3", stroke: '#000', strokeThickness: 3};
@@ -11,11 +18,22 @@ var postGameState= {
     this.hstext = this.game.add.text(this.hsbg.x, this.hsbg.y/4, "High Score", style);
     this.hstext.anchor.setTo(0.5,0.5);
 
+<<<<<<< HEAD
     //this.cltext = this.game.add.text(this.clbg.x, this.clbg.y/4, "Personligt Brev", style);
     //this.cltext.anchor.setTo(0.5,0.5);
        
     
     /*this.readtext = this.game.add.text(game.width/2, 20, , style);
+=======
+    this.cltext = this.game.add.text(this.clbg.x, this.clbg.y/4, "Personligt Brev", style);
+    this.cltext.anchor.setTo(0.5,0.5);
+      
+   this.letter_text = this.game.add.text(this.clbg.x + 40, this.clbg.y - 200, game.last_text, {font: "12px Courier", fill: "#000000#"}); 
+    
+    this.letter_text.anchor.setTo(0.5,0);
+    this.readtext = this.game.add.text(game.width/2, 20, game.end_s, style);
+    
+>>>>>>> 7cf16f57c5770adbb0845c4ad614b2cd835367fe
     this.readtext.anchor.setTo(0.5,0.5);
 
     this.fbtext = this.game.add.text(game.width/2, 40, "F: Dela på Facebook", style);
@@ -48,9 +66,13 @@ var postGameState= {
     var m = game.input.keyboard.addKey(Phaser.Keyboard.M)
     m.onDown.add(postGameState.menuState,this);
 
+<<<<<<< HEAD
     this.saveScore();
     game.highscores.sort(this.highScoresSort);
     this.printScores();
+=======
+    responsiveVoice.speak(game.last_text, "Swedish Male");
+>>>>>>> 7cf16f57c5770adbb0845c4ad614b2cd835367fe
 },
 
     saveScore: function(){

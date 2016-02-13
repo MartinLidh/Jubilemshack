@@ -164,7 +164,7 @@ Paper.prototype.assignText = function(input, color, point){
       console.log(allText);
       var t = "";
       allText.forEach(function(te){
-         t += te + ".";
+         t += te + ".\n\n";
       });
 
       game.music.stop();
