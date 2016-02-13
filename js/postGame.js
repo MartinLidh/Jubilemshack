@@ -1,8 +1,11 @@
 var postGameState= {
 
     create: function(){
-    this.bg = game.add.sprite(game.width/2, game.height/2, 'paper');
-    this.bg.anchor.setTo(0.5,0.5);
+    this.clbg = game.add.sprite(game.width/4, game.height/2, 'paper');
+    this.hsbg = game.add.sprite(game.width*0.75, game.height/2, 'paper');
+    this.clbg.anchor.setTo(0.5,0.5);
+    this.hsbg.anchor.setTo(0.5,0.5);
+    
     var style = { font: '24px monospace', align: 'center', fill: "#4a4a49", stroke: '#000000', strokeThickness: 2};
     
     this.text1 = this.game.add.text(this.bg.x, this.bg.y*1.8, "Press B to Back", style);
@@ -12,7 +15,7 @@ var postGameState= {
     this.text2.anchor.setTo(0.5,0.5);
        
     var b = game.input.keyboard.addKey(Phaser.Keyboard.B)
-    b.onDown.add(highScoreState.menuState,this);
+    b.onDown.add(postGameState.menuState,this);
 
 
 
