@@ -163,7 +163,7 @@
     }, 
 
      {
-      "sentence": "Jag finner ert företag #{0} och #{1} och \n skulle gärna #{2} ifall det är #{3}.",
+      "sentence": "Jag finner ert företag #{0} och #{1} och \n skulle gärna #{2} ifall det är \n #{3}.",
       "words": [
         [
          {

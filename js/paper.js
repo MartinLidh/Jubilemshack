@@ -164,12 +164,11 @@ Paper.prototype.assignText = function(input, color, point){
       console.log(allText);
       var t = "";
       allText.forEach(function(te){
-         t += te + ".";
+         t += te + ".\n\n";
       });
 
-      //responsiveVoice.speak(t, "Swedish Male");
-      game.t = "lol";
-      this.game.s = this.score;
+      game.last_text = t;
+      game.end_s = this.score;
       game.state.start('postgame');
       game.music.stop();
 

@@ -13,9 +13,11 @@ var postGameState= {
 
     this.cltext = this.game.add.text(this.clbg.x, this.clbg.y/4, "Personligt Brev", style);
     this.cltext.anchor.setTo(0.5,0.5);
-       
+      
+   this.letter_text = this.game.add.text(this.clbg.x + 40, this.clbg.y - 200, game.last_text, {font: "12px Courier", fill: "#000000#"}); 
     
-    this.readtext = this.game.add.text(game.width/2, 20, game.width, style);
+    this.letter_text.anchor.setTo(0.5,0);
+    this.readtext = this.game.add.text(game.width/2, 20, game.end_s, style);
     this.readtext.anchor.setTo(0.5,0.5);
 
     this.fbtext = this.game.add.text(game.width/2, 40, "F: Dela på Facebook", style);
@@ -45,6 +47,7 @@ var postGameState= {
     var m = game.input.keyboard.addKey(Phaser.Keyboard.M)
     m.onDown.add(postGameState.menuState,this);
 
+    responsiveVoice.speak(game.last_text, "Swedish Male");
 },
 
 	readLetter: function(){
