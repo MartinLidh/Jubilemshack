@@ -36,6 +36,10 @@ Paper.prototype.getCurrentText = function(){
 
 Paper.prototype.create = function(){
   game.add.image(this.x, this.y, 'paper');
+  game.add.text(this.x + 15, this.y + 15, "Personligt brev", {
+    fill: '#00000',
+    font: '20px Courier'
+  });
   this.triggerNextWord();
 };
 
@@ -43,7 +47,7 @@ Paper.prototype.triggerNextWord = function(){
   this.resetColours();
   this.currentSentence++;
   console.log(this.currentSentence);
-  var text = game.add.text(Math.floor(this.x + 20), Math.floor((this.y + 30) + (100 * this.currentSentence)), "", this.textStyle);
+  var text = game.add.text(Math.floor(this.x + 20), Math.floor((this.y + 60) + (100 * this.currentSentence)), "", this.textStyle);
   this.texts.push(text);
   var sentence = this.getCurrentSentence();
   sentence = sentence.replace(/(#{\d})/g, "██████████");
