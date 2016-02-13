@@ -141,7 +141,7 @@
           "word": "avstå att söka",
           "points": -1
          },{
-          "word": "vilja lägga ner ert företag",
+          "word": "lägga ner företaget",
           "points": -3
          },{
           "word": "söka tjänsten",
@@ -192,7 +192,7 @@
           "word": "en lättsam attityd",
           "points": 4
          },{
-          "word": "mina överlägsna programmeringskunskaper",
+          "word": "mina överlägsna proggskillz",
           "points": 6
          }
         ],[
@@ -235,8 +235,7 @@
           "word": "god stämning",
           "points": 6
          }
-        ]
-      ],[
+        ],[
          {
           "word": "seriöst",
           "points": 4
@@ -257,6 +256,7 @@
           "points": 6
          }
         ]
+       ] 
     },
 
     {
@@ -307,27 +307,7 @@
           "word": "pluggar",
           "points": 4
          },{
-          "word": "latar jag mig",
-          "points": -4
-         },{
-          "word": "ligger",
-          "points": -1
-         },{
-          "word": "strosar",
-          "points": -3
-         },{
-          "word": "studerar",
-          "points": 4
-         },{
-          "word": "jobbar",
-          "points": 6
-         }
-        ],[
-         {
-          "word": "pluggar",
-          "points": 4
-         },{
-          "word": "latar jag mig",
+          "word": "skiter",
           "points": -4
          },{
           "word": "ligger",
@@ -350,7 +330,72 @@
           "word": "sängen",
           "points": -4
          },{
-          "word": "",
+          "word": "min lägenhet",
+          "points": -1
+         },{
+          "word": "på en grön sommaräng",
+          "points": -3
+         },{
+          "word": "mina sidoprojekt",
+          "points": 4
+         },{
+          "word": "mina 14 extraarbeten",
+          "points": 6
+         }
+        ]
+      ]
+    }, {
+      "sentence": "Jag studerar mitt #{0} år på min femåriga utbildning som handlar om #{1}. I verkligen #{2} jag mest i #{3} ändå.",
+      "words": [
+        [
+         {
+          "word": "tredje",
+          "points": 2
+         },{
+          "word": "nionde",
+          "points": -4
+         },{
+          "word": "första",
+          "points": -1
+         },{
+          "word": "sjunde",
+          "points": -3
+         },{
+          "word": "fjärde",
+          "points": 4
+         },{
+          "word": "femte",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "Maskinteknik",
+          "points": 4
+         },{
+          "word": "Slaveri",
+          "points": -4
+         },{
+          "word": "Slamdykare",
+          "points": -1
+         },{
+          "word": "Harry Potter-kunskap",
+          "points": -3
+         },{
+          "word": "Programmering",
+          "points": 5
+         },{
+          "word": "Informationsteknik",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "pluggar",
+          "points": 4
+         },{
+          "word": "skiter",
+          "points": -4
+         },{
+          "word": "ligger",
           "points": -1
          },{
           "word": "strosar",
@@ -360,6 +405,26 @@
           "points": 4
          },{
           "word": "jobbar",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "grupprum",
+          "points": 4
+         },{
+          "word": "sängen",
+          "points": -4
+         },{
+          "word": "min lägenhet",
+          "points": -1
+         },{
+          "word": "på en grön sommaräng",
+          "points": -3
+         },{
+          "word": "mina sidoprojekt",
+          "points": 4
+         },{
+          "word": "mina 14 extraarbeten",
           "points": 6
          }
         ]
