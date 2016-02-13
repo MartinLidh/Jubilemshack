@@ -22,6 +22,27 @@
          },{
           "word": "Bruce Wayne",
           "points": 6
+         },{
+          "word": "Herr Ober",
+          "points": -5
+          },{
+          "word": "Masterboss of doom",
+          "points": -4
+         },{
+          "word": "Batman",
+          "points": -1
+         },{
+          "word": "Bin laden, Herr bin laden",
+          "points": -3
+         },{
+          "word": "Erik af äppeltunga",
+          "points": 4
+         },{
+          "word": "Jakob Steksson",
+          "points": 6
+         }, ,{
+          "word": "Tim Lolstander",
+          "points": -10
          }
         ],[
          {
@@ -41,6 +62,24 @@
           "points": 4
          },{
           "word": "ambitiös",
+          "points": 6
+         },{
+          "word": "snäll",
+          "points": 4
+         },{
+          "word": "elak",
+          "points": -4
+         },{
+          "word": "hjärtlös",
+          "points": -1
+         },{
+          "word": "illasinnad",
+          "points": -3
+         },{
+          "word": "hurtig",
+          "points": 4
+         },{
+          "word": "lugn",
           "points": 6
          }
         ],[
@@ -62,6 +101,24 @@
          },{
           "word": "Skill-anställd",
           "points": 6
+         },{
+          "word": "student",
+          "points": 4
+         },{
+          "word": "snubbe",
+          "points": -4
+         },{
+          "word": "snyltare",
+          "points": -1
+         },{
+          "word": "dude",
+          "points": -3
+         },{
+          "word": "arbetssökande",
+          "points": 4
+         },{
+          "word": "programmerare",
+          "points": 6
          }
         ],[
          {
@@ -81,6 +138,24 @@
           "points": 4
          },{
           "word": "programmera",
+          "points": 6
+         },{
+          "word": "söka jobb, yay",
+          "points": 4
+         },{
+          "word": "rida på min feta häst",
+          "points": -4
+         },{
+          "word": "chillaxa",
+          "points": -1
+         },{
+          "word": "äta godis",
+          "points": -3
+         },{
+          "word": "utföra hjältedåd",
+          "points": 4
+         },{
+          "word": "fjäska för mina chefer",
           "points": 6
          }
         ]
@@ -109,6 +184,24 @@
          },{
           "word": "riktigt spännande",
           "points": 6
+         },{
+          "word": "oerhört roligt",
+          "points": 4
+         },{
+          "word": "löjeväckande",
+          "points": -4
+         },{
+          "word": "fett med ball",
+          "points": -1
+         },{
+          "word": "skadligt ointressant",
+          "points": -3
+         },{
+          "word": "superskojsigt",
+          "points": 4
+         },{
+          "word": "riktigt intresseväckande",
+          "points": 6
          }
         ],[
          {
@@ -129,6 +222,27 @@
          },{
           "word": "ambitiöst",
           "points": 6
+         },{
+          "word": "häftigt",
+          "points": 4
+         },{
+          "word": "grått som en tidig kväll i november",
+          "points": -4
+         },{
+          "word": "uselt",
+          "points": -1
+         },{
+          "word": "olidligt tråkigt",
+          "points": -3
+         },{
+          "word": "nice",
+          "points": 4
+         },{
+          "word": "svårt kul",
+          "points": 6
+         },{
+          "word": "jag är trött på er skit",
+          "points": -6
          }
         ],[
          {
@@ -149,7 +263,25 @@
          },{
           "word": "träffa er",
           "points": 6
-         }
+         },{
+          "word": "besöka ert kontor",
+          "points": 4
+         },{
+          "word": "riva er skit",
+          "points": -4
+         },{
+          "word": "gå hem nu",
+          "points": -1
+         },{
+          "word": "sova på arbetstid",
+          "points": -3
+         },{
+          "word": "arbeta hos er",
+          "points": 4
+         },{
+          "word": "diskutera framtiden",
+          "points": 6
+         } 
         ],[
          {
           "word": "möjligt",
@@ -165,6 +297,21 @@
           "points": 4
          },{
           "word": "i linje med era önskemål",
+          "points": 6
+         },{
+          "word": "rimligt",
+          "points": 4
+         },{
+          "word": "görbart för er noobs",
+          "points": -4
+         },{
+          "word": "en sak ni klarar av",
+          "points": -1
+         },{
+          "word": "av ert intresse",
+          "points": 4
+         },{
+          "word": "trevligt",
           "points": 6
          }
         ]
@@ -194,6 +341,24 @@
          },{
           "word": "mina överlägsna proggskillz",
           "points": 6
+         }, {
+          "word": "stolthet",
+          "points": 4
+         },{
+          "word": "sorg",
+          "points": -4
+         },{
+          "word": "med en hel del skit",
+          "points": -1
+         },{
+          "word": "svårt dåligt jobb",
+          "points": -3
+         },{
+          "word": "en bra teamspirit",
+          "points": 4
+         },{
+          "word": "en trevlig framtoning",
+          "points": 6
          }
         ],[
          {
@@ -214,25 +379,23 @@
          },{
           "word": "seriositet",
           "points": 6
-         }
-        ],[
-         {
-          "word": "seriöst",
+         },{
+          "word": "breda kunskaper",
           "points": 4
          },{
-          "word": "tråkigt",
+          "word": "en skön stil",
           "points": -4
          },{
-          "word": "lojt",
+          "word": "dåligt humör",
           "points": -1
          },{
-          "word": "rörigt",
+          "word": "en osannolikt dålig attityd",
           "points": -3
          },{
-          "word": "roligt",
+          "word": "bra arbete",
           "points": 4
          },{
-          "word": "god stämning",
+          "word": "stor kunskap inom it",
           "points": 6
          }
         ],[
@@ -253,6 +416,62 @@
           "points": 4
          },{
           "word": "god stämning",
+          "points": 6
+         },{
+          "word": "trevligt",
+          "points": 4
+         },{
+          "word": "otrevligt",
+          "points": -4
+         },{
+          "word": "segt",
+          "points": -1
+         },{
+          "word": "dålig stämning",
+          "points": -3
+         },{
+          "word": "lärorikt",
+          "points": 4
+         },{
+          "word": "intressant",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "seriöst",
+          "points": 4
+         },{
+          "word": "lodigt",
+          "points": -4
+         },{
+          "word": "osoft",
+          "points": -1
+         },{
+          "word": "otrevligt",
+          "points": -3
+         },{
+          "word": "roligt",
+          "points": 4
+         },{
+          "word": "otroligt roligt",
+          "points": 6
+         },{
+          "word": "positivt",
+          "points": 4
+         },{
+          "word": "lökigt",
+          "points": -4
+         },{
+          "word": "lame",
+          "points": -1
+         },{
+          "word": "nasty",
+          "points": -3
+         },{
+          "word": "nice",
+          "points": 4
+         },{
+          "word": "en skämtsam miljö",
           "points": 6
          }
         ]
@@ -260,7 +479,7 @@
     },
 
     {
-      "sentence": "Jag studerar mitt #{0} år på min femåriga \n utbildning som handlar om #{1}. \n I verkligen #{2} jag mest i #{3} ändå.",
+      "sentence": "Jag studerar mitt #{0} år på min femåriga \n utbildning som handlar om #{1}. \n I verkligeheten #{2} jag mest i #{3} dock.",
       "words": [
         [
          {
@@ -279,8 +498,11 @@
           "word": "fjärde",
           "points": 4
          },{
-          "word": "femte",
+          "word": "andra",
           "points": 6
+         },{
+          "word": "femtioelfte",
+          "points": -4
          }
         ],[
          {
@@ -300,6 +522,24 @@
           "points": 5
          },{
           "word": "Informationsteknik",
+          "points": 6
+         },{
+          "word": "professionell spelutvecklig",
+          "points": 4
+         },{
+          "word": "JSON-slav",
+          "points": -4
+         },{
+          "word": "sotare",
+          "points": -1
+         },{
+          "word": "Bilmacksassistent",
+          "points": -3
+         },{
+          "word": "marknadsföring",
+          "points": 5
+         },{
+          "word": "rymdforskning",
           "points": 6
          }
         ],[
@@ -321,6 +561,24 @@
          },{
           "word": "jobbar",
           "points": 6
+         }, {
+          "word": "hudar",
+          "points": -2
+         },{
+          "word": "struntar",
+          "points": -4
+         },{
+          "word": "hänger",
+          "points": -1
+         },{
+          "word": "filosoferar",
+          "points": -3
+         },{
+          "word": "arbetar",
+          "points": 4
+         },{
+          "word": "kodar",
+          "points": 6
          }
         ],[
          {
@@ -340,6 +598,24 @@
           "points": 4
          },{
           "word": "mina 14 extraarbeten",
+          "points": 6
+         },{
+          "word": "klassrum",
+          "points": 4
+         },{
+          "word": "baren",
+          "points": -4
+         },{
+          "word": "nån randoms lägenhet",
+          "points": -1
+         },{
+          "word": "poolen",
+          "points": -3
+         },{
+          "word": "seriösa arbeten",
+          "points": 4
+         },{
+          "word": "skolarbeten",
           "points": 6
          }
         ]
@@ -366,6 +642,24 @@
          },{
           "word": "arbeta i grupp",
           "points": 6
+         },{
+          "word": "jobba",
+          "points": 2
+         },{
+          "word": "chilla galet",
+          "points": -4
+         },{
+          "word": "hänga med polare",
+          "points": -1
+         },{
+          "word": "inte bry mig ett skit",
+          "points": -3
+         },{
+          "word": "sälja saker",
+          "points": 4
+         },{
+          "word": "marknadsföra mig själv",
+          "points": 6
          }
         ],[
          {
@@ -385,6 +679,24 @@
           "points": 5
          },{
           "word": "onlineshoppa",
+          "points": -2
+         },{
+          "word": "vara seriös",
+          "points": 4
+         },{
+          "word": "fara med osanning",
+          "points": -4
+         },{
+          "word": "agera halvhjärtat",
+          "points": -1
+         },{
+          "word": "snacka skit",
+          "points": -3
+         },{
+          "word": "mäta",
+          "points": 5
+         },{
+          "word": "köpa trisslotter",
           "points": -2
          }
         ],[
@@ -406,6 +718,24 @@
          },{
           "word": "IT",
           "points": 6
+         },{
+          "word": "Medlehavets fiske",
+          "points": 4
+         },{
+          "word": "ryska fräckisar",
+          "points": -4
+         },{
+          "word": "framtiden",
+          "points": -1
+         },{
+          "word": "tråkiga skämt",
+          "points": -3
+         },{
+          "word": "historia",
+          "points": 4
+         },{
+          "word": "ekonomi",
+          "points": 6
          }
         ],[
          {
@@ -424,7 +754,25 @@
           "word": "väldigt bra",
           "points": 4
          },{
-          "word": "utsökt",
+          "word": "utsökta",
+          "points": 6
+         }, {
+          "word": "totally awesome",
+          "points": -2
+         },{
+          "word": "amazeballs",
+          "points": -4
+         },{
+          "word": "osannolikt dåliga",
+          "points": -1
+         },{
+          "word": "genomruttna",
+          "points": -3
+         },{
+          "word": "fantastiska",
+          "points": 4
+         },{
+          "word": "bäst i världen",
           "points": 6
          }
         ]
