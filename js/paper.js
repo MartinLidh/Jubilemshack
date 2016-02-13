@@ -3,6 +3,8 @@ String.prototype.splice = function(idx, rem, str) {
 };
 
 Paper = function (game, x, y, rotateSpeed) {
+
+  game.music.play();
   Phaser.Sprite.call(this, game, x, y, 'paper');
   this.wordSpawner = null;
   this.wordDelay = 20;
@@ -46,7 +48,7 @@ Paper.prototype.create = function(){
     fill: '#00000',
     font: '20px Courier'
   });
-  this.scoreText = game.add.text(Math.floor(this.x + 120), Math.floor(this.y + this.height - 30), "20", {
+  this.scoreText = game.add.text(Math.floor(this.x + 120), Math.floor(this.y + this.height - 30), "0", {
     fill: '#00000',
     font: '20px Courier'
   });
@@ -164,12 +166,12 @@ Paper.prototype.assignText = function(input, color, point){
       allText.forEach(function(te){
          t += te + ".";
       });
+
       //responsiveVoice.speak(t, "Swedish Male");
       game.t = "lol";
       this.game.s = this.score;
       game.state.start('postgame');
-
-
+      game.music.stop();
 
     }else{
       this.triggerNextWord();
