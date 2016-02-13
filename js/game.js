@@ -1,5 +1,5 @@
 var cursors;
-var charScale = 0.4
+var charScale = 0.4;
 
 var gameState = {
 
@@ -10,13 +10,17 @@ var gameState = {
 	//game.add.image(0, 0, 'bg');
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	cursors = game.input.keyboard.createCursorKeys();
-	
-
-
 	var w = game.width;
 	var h = game.height;
+	this.words = game.add.group();
 	game.paper = new Paper(game, this.game.width/2, 0, 1);
+	game.paper.create();
 	game.player = new Player(game);
+	this.spawnWord();
+
+	this.game.time.events.loop(5000, function() {
+		this.spawnWord();
+	}, this);
 	//game.physics.enable(game.player, Phaser.Physics.ARCADE);
 	
 
@@ -32,13 +36,27 @@ var gameState = {
 	  cursors = game.input.keyboard.createCursorKeys();
 	  
 	*/
-	game.paper.create();
-	game.player.create();
+	
+
     },
 
 
     update: function(){
+	
 	game.player.player.body.velocity.setTo(0, 0);
+
+	this.game.physics.arcade.overlap(game.player.player, this.words, function(player, word) {
+		
+		this.game.paper.assignText(word.wordText, word.wordColor);
+		word.text.destroy();
+		word.destroy();
+		
+	
+
+		
+
+	}, null, this);
+
 
 	if(cursors.left.isDown)
 	{
@@ -55,7 +73,26 @@ var gameState = {
 	}
 
 	
-}
+},
+	wordHit: function() {
 
 
-    };
+	},
+
+	spawnWord: function() {
+
+		var word = 	game.paper.getWord();
+		var speed = 100;
+		var rndX = game.rnd.integerInRange(10, 500);
+		console.log(rndX);
+		var word =this.words.add(new Word(game, rndX, -30, speed,word.word, word.color));
+		word.update = function(){
+			this.text.x = Math.floor(this.x + this.width / 2);
+    		this.text.y = Math.floor(this.y + this.height / 2);
+
+		};
+
+	}
+
+
+};

@@ -2,7 +2,7 @@ Player = function (game){
     
     // Phaser.Sprite.call(this, game, game.width/4, game.height-50, 'char');
     
-    this.player = game.add.sprite(game.width/4 ,game.height-50, 'char');
+    this.player = game.add.sprite(game.width/4, game.height-50, 'char');
     game.physics.arcade.enable(this.player);
     
     this.player.scale.setTo(0.4,0.4);
