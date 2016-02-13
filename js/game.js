@@ -1,5 +1,5 @@
 var cursors;
-var charScale = 0.4
+var charScale = 0.4;
 
 var gameState = {
 
@@ -10,13 +10,16 @@ var gameState = {
 	//game.add.image(0, 0, 'bg');
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	cursors = game.input.keyboard.createCursorKeys();
-	
-
-
 	var w = game.width;
 	var h = game.height;
+	this.words = game.add.group();
 	game.paper = new Paper(game, this.game.width/2, 0, 1);
 	game.player = new Player(game);
+	this.spawnWord();
+
+	this.game.time.events.loop(5000, function() {
+		this.spawnWord();
+	}, this);
 	//game.physics.enable(game.player, Phaser.Physics.ARCADE);
 	
 
@@ -38,7 +41,18 @@ var gameState = {
 
 
     update: function(){
+	
 	game.player.player.body.velocity.setTo(0, 0);
+
+	this.game.physics.arcade.overlap(this.words, game.player.player, function(word, player) {
+			console.log("KROCKHORA");
+
+		if (!word.taken) {
+			word.taken = true;
+		} 
+
+	}, null, this);
+
 
 	if(cursors.left.isDown)
 	{
@@ -55,7 +69,23 @@ var gameState = {
 	}
 
 	
-}
+},
+
+	spawnWord: function() {
+
+		var text = "Test";
+		var color = "#00ee33";
+		var speed = 100;
+	
+
+		var word =this.words.add(new Word(game, 10, 10, speed));
+		word.update = function(){
+			this.text.x = Math.floor(this.x + this.width / 2);
+    		this.text.y = Math.floor(this.y + this.height / 2);
+
+		};
+
+	}
 
 
-    };
+};
