@@ -8,12 +8,15 @@ var gameState = {
     //game.add.plugin(Phaser.Plugin.Debug);
     //game.add.plugin(Phaser.Plugin.Inspector);
     //game.add.image(0, 0, 'bg');
+
+
+
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     cursors = game.input.keyboard.createCursorKeys();
     var w = game.width;
     var h = game.height;
     this.words = game.add.group();
-    game.paper = new Paper(game, this.game.width/2, 0, 1);
+    game.paper = new Paper(game, this.game.width/2, 50, 1);
     game.paper.create();
     game.player = new Player(game);
     //this.spawnWord();

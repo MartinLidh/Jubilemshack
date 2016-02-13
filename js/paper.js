@@ -167,11 +167,15 @@ Paper.prototype.assignText = function(input, color, point){
          t += te + ".";
       });
 
-      //responsiveVoice.speak(t, "Swedish Male");
-      game.t = "lol";
-      this.game.s = this.score;
-      game.state.start('postgame');
       game.music.stop();
+      responsiveVoice.speak(t, "Swedish Male");
+      game.s = this.score;
+      if(!responsiveVoice.isPlaying()){
+      game.state.start('postgame');
+      }
+      
+
+
 
     }else{
       this.triggerNextWord();
