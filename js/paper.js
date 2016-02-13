@@ -51,7 +51,7 @@ Paper.prototype.triggerNextWord = function(){
   var minusNewline = 0;
   var wordCount = -1;
   game.time.events.start();
-  game.time.events.loop(this.wordDelay, function(){
+  var timer = game.time.events.loop(this.wordDelay, function(){
     if(sentence[letterIndex] === "\n"){
       minusNewline++;
     }
@@ -67,8 +67,13 @@ Paper.prototype.triggerNextWord = function(){
     text.text = sentence.substring(0, letterIndex);
     letterIndex++;
     if(letterIndex >= sentence.length){
-      game.time.events.stop();
-      var v = this.getWord();
+      game.time.events.remove(this.timer);
+
+    }
+  }, this);
+
+};
+/*      var v = this.getWord();
       console.log(v);
       this.assignText(v.word, v.color);
       v = this.getWord();
@@ -76,12 +81,7 @@ Paper.prototype.triggerNextWord = function(){
       v = this.getWord();
       this.assignText(v.word, v.color);
       v = this.getWord();
-      this.assignText(v.word, v.color);
-    }
-  }, this);
-
-};
-
+      this.assignText(v.word, v.color);*/
 Paper.prototype.getWordFromColor = function(color){
   allWordColours = ['blue', 'pink', 'red', 'yellow'];
   var cIndex = allWordColours.indexOf(color);
@@ -130,6 +130,8 @@ Paper.prototype.assignText = function(input, color){
 
   } 
   if(wordCount === -1){
+    console.log(text.text);
+    console.log("trigger!");
     this.triggerNextWord();
   }
 
