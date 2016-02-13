@@ -105,8 +105,8 @@ var gameState = {
         this.destroy();
       }
 
-      this.text.x = Math.floor(this.x + this.width / 2);
-      this.text.y = Math.floor(this.y + this.height / 2);
+      this.text.x = Math.floor(this.x); //+ this.width / 2);
+      this.text.y = Math.floor(this.y);// + this.height / 2);
 
 
     };
