@@ -147,7 +147,19 @@ Paper.prototype.assignText = function(input, color, point){
   } 
   if(wordCount === -1){
     this.calculateScore(this.roundPoints);
-    this.triggerNextWord();
+    if(this.currentSentence === this.sentences.sentences.length - 1){
+      allText = this.texts.map(function(t){
+        return t.text;
+      });
+      console.log(allText);
+      var t = "";
+      allText.forEach(function(te){
+         t += te + " ";
+      });
+      responsiveVoice.speak(t, "Swedish Male");
+    }else{
+      this.triggerNextWord();
+    }
   }
 }
 
