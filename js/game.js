@@ -42,6 +42,10 @@ var gameState = {
   update: function(){
 
     game.player.player.body.velocity.setTo(0, 0);
+    if (w.wordColor == word.wordColor) {
+      w.text.kill();
+      w.kill();
+    }
 
     this.game.physics.arcade.overlap(game.player.player, this.words, function(player, word) {
 
