@@ -62,11 +62,28 @@ Paper.prototype.create = function(){
     if(letterIndex >= sentence.length){
       game.time.events.stop();
       this.assignText("Björne", "blue");
+      console.log(this.getWord());
       this.assignText("ful kille", "yellow");
+      console.log(this.getWord());
       this.assignText("hatar kvinnor", "red");
+      console.log(this.getWord());
       this.assignText("Björne", "pink");
     }
   }, this);
+};
+
+Paper.prototype.getWordFromColor = function(color){
+  allWordColours = ['blue', 'pink', 'red', 'yellow'];
+  var cIndex = allWordColours.indexOf(color);
+  return this.sentences.sentences[this.currentSentence].words[cIndex];
+};
+
+Paper.prototype.getWord = function(){
+  var randomColorIndex = Math.floor(Math.random() * this.wordColours.length);
+  var color = this.wordColours[randomColorIndex];
+  var w = this.getWordFromColor(color);
+  w.color = color;
+  return w;
 };
 
 Paper.prototype.assignText = function(input, color){
