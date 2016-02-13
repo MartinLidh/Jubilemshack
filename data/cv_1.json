@@ -132,23 +132,6 @@
          }
         ],[
          {
-          "word": "möjligt",
-          "points": 4
-         },{
-          "word": "inte okej struntar jag i det",
-          "points": -4
-         },{
-          "word": "inte passar ändå",
-          "points": -1
-         },{
-          "word": "är intressant",
-          "points": 4
-         },{
-          "word": "Massa poäng",
-          "points": 6
-         }
-        ],[
-         {
           "word": "komma på intervju",
           "points": 4
          },{
@@ -165,6 +148,23 @@
           "points": 4
          },{
           "word": "träffa er",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "möjligt",
+          "points": 4
+         },{
+          "word": "inte okej struntar jag i det",
+          "points": -4
+         },{
+          "word": "inte passar ändå",
+          "points": -1
+         },{
+          "word": "är intressant",
+          "points": 4
+         },{
+          "word": "Massa poäng",
           "points": 6
          }
         ]
