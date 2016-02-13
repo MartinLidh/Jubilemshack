@@ -155,16 +155,16 @@
           "word": "möjligt",
           "points": 4
          },{
-          "word": "inte okej struntar jag i det",
+          "word": "fucking möjligt",
           "points": -4
          },{
-          "word": "inte passar ändå",
+          "word": "okej med er????!!!!!",
           "points": -1
          },{
-          "word": "är intressant",
+          "word": "intressant",
           "points": 4
          },{
-          "word": "Massa poäng",
+          "word": "i linje med era önskemål",
           "points": 6
          }
         ]
@@ -173,7 +173,7 @@
     }, 
 
      {
-      "sentence": "Jag tror att jag kan tillföra #{0}, bidra med #{1} och se till att det alltid är #{2} på jobbet!",
+      "sentence": "Jag tror att jag kan tillföra #{0}, bidra med #{1} och se till att det alltid är #{2} och #{3} på jobbet!",
       "words": [
         [
          {
@@ -236,53 +236,7 @@
           "points": 6
          }
         ]
-      ]
-    },
-
-    {
-      "sentence": "Jag studerar mitt #{0}",
-      "words": [
-        [
-         {
-          "word": "glädje",
-          "points": 4
-         },{
-          "word": "merarbete för mina kollegor",
-          "points": -4
-         },{
-          "word": "skit",
-          "points": -1
-         },{
-          "word": "risigt arbete",
-          "points": -3
-         },{
-          "word": "en lättsam attityd",
-          "points": 4
-         },{
-          "word": "mina överlägsna programmeringskunskaper",
-          "points": 6
-         }
-        ],[
-         {
-          "word": "positivitet",
-          "points": 4
-         },{
-          "word": "balla skämt",
-          "points": -4
-         },{
-          "word": "trist stämning",
-          "points": -1
-         },{
-          "word": "en sällan skådad negativitet",
-          "points": -3
-         },{
-          "word": "stor arbetskapacitet",
-          "points": 4
-         },{
-          "word": "seriositet",
-          "points": 6
-         }
-        ],[
+      ],[
          {
           "word": "seriöst",
           "points": 4
@@ -300,6 +254,112 @@
           "points": 4
          },{
           "word": "god stämning",
+          "points": 6
+         }
+        ]
+    },
+
+    {
+      "sentence": "Jag studerar mitt #{0} år på min femåriga utbildning som handlar om #{1}. I verkligen #{2} jag mest i #{3} ändå.",
+      "words": [
+        [
+         {
+          "word": "tredje",
+          "points": 2
+         },{
+          "word": "nionde",
+          "points": -4
+         },{
+          "word": "första",
+          "points": -1
+         },{
+          "word": "sjunde",
+          "points": -3
+         },{
+          "word": "fjärde",
+          "points": 4
+         },{
+          "word": "femte",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "Maskinteknik",
+          "points": 4
+         },{
+          "word": "Slaveri",
+          "points": -4
+         },{
+          "word": "Slamdykare",
+          "points": -1
+         },{
+          "word": "Harry Potter-kunskap",
+          "points": -3
+         },{
+          "word": "Programmering",
+          "points": 5
+         },{
+          "word": "Informationsteknik",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "pluggar",
+          "points": 4
+         },{
+          "word": "latar jag mig",
+          "points": -4
+         },{
+          "word": "ligger",
+          "points": -1
+         },{
+          "word": "strosar",
+          "points": -3
+         },{
+          "word": "studerar",
+          "points": 4
+         },{
+          "word": "jobbar",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "pluggar",
+          "points": 4
+         },{
+          "word": "latar jag mig",
+          "points": -4
+         },{
+          "word": "ligger",
+          "points": -1
+         },{
+          "word": "strosar",
+          "points": -3
+         },{
+          "word": "studerar",
+          "points": 4
+         },{
+          "word": "jobbar",
+          "points": 6
+         }
+        ],[
+         {
+          "word": "grupprum",
+          "points": 4
+         },{
+          "word": "sängen",
+          "points": -4
+         },{
+          "word": "",
+          "points": -1
+         },{
+          "word": "strosar",
+          "points": -3
+         },{
+          "word": "studerar",
+          "points": 4
+         },{
+          "word": "jobbar",
           "points": 6
          }
         ]
