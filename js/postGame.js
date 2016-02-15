@@ -34,10 +34,10 @@ var postGameState= { create: function(){
     this.newtext = this.game.add.text(game.width/2, 80, "N: Nytt spel", style);
     this.newtext.anchor.setTo(0.5,0.5);*/
 
-    this.backtext = this.game.add.text(game.width/1.5, 200, "N: Nytt spel", style);
+    this.backtext = this.game.add.text(game.width/4, game.height/4, "N: Nytt spel", style);
     this.backtext.anchor.setTo(0.5,0.5);
 
-    this.backtext = this.game.add.text(game.width/1.5, 300, "M: Huvudmeny", style);
+    this.backtext = this.game.add.text(game.width/4, game.height/3, "M: Huvudmeny", style);
     this.backtext.anchor.setTo(0.5,0.5);
 
     /*var l = game.input.keyboard.addKey(Phaser.Keyboard.L)
