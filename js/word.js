@@ -30,4 +30,7 @@ Word.prototype.constructor = Word;
     this.tweenX.to({this.x: value}, 1000);
     this.tweenX.start();
 
+
+
+
 }*/
